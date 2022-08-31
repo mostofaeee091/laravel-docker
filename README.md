@@ -1,7 +1,7 @@
 # About
 
 This repository contains everything you need to get started to run a 
-Laravel 5 / 6 / 7 application with Docker in 3 minutes. It is made for legacy projects that cannot be upgraded to Laravel 8 in near future but would like to use docker.
+Laravel 5 / 6 / 7 application with Docker in 3 minutes.
 
 This package is not needed for Laravel 8 and upwards, as Laravel versions from 8 upwards ships with a wrapper for docker, called [Laravel Sail](https://laravel.com/docs/sail).
 
@@ -22,6 +22,10 @@ Its required that one has [docker-compose](https://docs.docker.com/compose/insta
 We assume that you add this to an existing project, as since Laravel 8 docker ships in by default.
 
 Copy all files except `.env` and `readme.md` in your current project folder. Overwrite the credentions from your `.env` locally with those provided here. If you dont want to overwrite database name and user, then please adjust the file in `docker-compose/mysql/init/01-databaes.sql` according to your needs.
+
+## cd /opt
+## git clone
+## chmod -R 777 project-directory 
 
 ## Step 2: Execute docker
 
