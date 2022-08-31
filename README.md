@@ -15,6 +15,10 @@ Laravel 5 / 6 / 7 / 8 application with Docker in 3 minutes.
 
 # Setup
 
+  ```sh
+  apt install docker -y
+  ```
+
 Its required that one has [docker-compose](https://docs.docker.com/compose/install/) on the machine installed.
 
 ## Step 1: Copy files in your directory
