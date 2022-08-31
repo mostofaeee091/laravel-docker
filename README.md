@@ -1,9 +1,9 @@
 # About
 
 This repository contains everything you need to get started to run a 
-Laravel 5 / 6 / 7 application with Docker in 3 minutes.
+Laravel 5 / 6 / 7 / 8 application with Docker in 3 minutes.
 
-This package is not needed for Laravel 8 and upwards, as Laravel versions from 8 upwards ships with a wrapper for docker, called [Laravel Sail](https://laravel.com/docs/sail).
+
 
 ## Table of Contents
 
