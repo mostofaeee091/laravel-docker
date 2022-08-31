@@ -23,9 +23,18 @@ We assume that you add this to an existing project.
 
 Copy all files except `.env` and `readme.md` in your current project folder. Overwrite the credentions from your `.env` locally with those provided here. If you dont want to overwrite database name and user, then please adjust the file in `docker-compose/mysql/init/01-databaes.sql` according to your needs.
 
-## cd /opt
-## git clone
-## chmod -R 777 project-directory 
+
+  ```sh
+  cd /opt
+  ```
+  ```sh
+  git clone
+  ```
+Directory Pernission:
+
+  ```sh
+  chmod -R 777 project-directory
+  ```
 
 ## Step 2: Execute docker
 
