@@ -48,7 +48,7 @@ services:
     ports:
       - 8081:80
     networks:
-      - mostofa
+      - lahmi
       
   nginx:
     image: nginx:alpine
