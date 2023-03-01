@@ -15,7 +15,7 @@ services:
     volumes:
       - ./:/var/www
     networks:
-      - lipton
+      - lahmi
 
   db:
     image: mysql:8.0.30
@@ -33,7 +33,7 @@ services:
     ports:
       - 3307:3306
     networks:
-      - mostofa
+      - lahmi
   
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -61,7 +61,7 @@ services:
       - ./:/var/www
       - ./docker-compose/nginx:/etc/nginx/conf.d/
     networks:
-      - mostofa
+      - lahmi
 
 networks:
   lahmi:
