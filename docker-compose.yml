@@ -35,9 +35,9 @@ services:
     networks:
       - lahmi
       
-    phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      container_name: phpmyadmin
+ phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
     links:
       - db
     environment:
