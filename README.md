@@ -41,7 +41,11 @@ Directory Pernission:
   ```
 
 ## Step 2: Execute docker
+## Docker Start
 
+  ```sh
+  sudo service docker start
+  ```
 Run container
 
   ```sh
