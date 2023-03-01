@@ -6,7 +6,7 @@ services:
         user: mostofa
         uid: 1000
       context: ./
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     working_dir: /var/www/
     environment:
       - COMPOSER_MEMORY_LIMIT=-1
@@ -15,10 +15,10 @@ services:
     volumes:
       - ./:/var/www
     networks:
-      - lahmi
+      - lipton
 
   db:
-    image: mysql:5.7
+    image: mysql:8.0.30
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
@@ -33,12 +33,27 @@ services:
     ports:
       - 3307:3306
     networks:
-      - lahmi
-
+      - mostofa
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80
+    networks:
+      - mostofa
+      
   nginx:
     image: nginx:alpine
     ports:
-      - 8005:80
+      - 8002:80
     depends_on:
       - db
       - app
@@ -46,7 +61,7 @@ services:
       - ./:/var/www
       - ./docker-compose/nginx:/etc/nginx/conf.d/
     networks:
-      - lahmi
+      - mostofa
 
 networks:
   lahmi:
@@ -55,4 +70,3 @@ networks:
 volumes:
   dbdata:
     driver: local
-
